@@ -1,0 +1,34 @@
+from collections import defaultdict, deque
+# Graph using adjacency list
+graph = defaultdict(list)
+def add_edge(u, v):
+    graph[u].append(v)
+    graph[v].append(u) # undirected graph
+# DFS (Recursive)
+def dfs(node, visited):
+    if node not in visited:
+        print(node, end=" ")
+        visited.add(node)
+        for neighbor in graph[node]:
+            dfs(neighbor, visited)
+# BFS (Iterative)
+def bfs(start):
+    visited = set()
+    queue = deque([start])
+    while queue:
+        node = queue.popleft()
+        if node not in visited:
+            print(node, end=" ")
+            visited.add(node)
+            for neighbor in graph[node]:
+                queue.append(neighbor)
+# Example graph
+add_edge(0, 1)
+add_edge(0, 2)
+add_edge(1, 3)
+add_edge(1, 4)
+add_edge(2, 5)
+print("DFS Traversal:")
+dfs(0, set())
+print("\nBFS Traversal:")
+bfs(0)
