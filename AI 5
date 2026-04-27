@@ -1,0 +1,25 @@
+def chatbot():
+    print(" Welcome to Customer Support Chatbot!")
+    print("Type 'exit' to end the chat.\n")
+    while True:
+        user = input("You: ").lower()
+        if user == "exit":
+            print("Bot: Thank you! Have a great day ")
+            break
+        elif "hello" in user or "hi" in user:
+            print("Bot: Hello! How can I assist you today?")
+        elif "order" in user:
+            print("Bot: Please provide your order ID to check status.")
+        elif "price" in user or "cost" in user:
+            print("Bot: Our product prices range from ₹500 to ₹5000.")
+        elif "refund" in user:
+            print("Bot: Refunds are processed within 5-7 business days.")
+        elif "delivery" in user:
+            print("Bot: Delivery usually takes 3-5 days.")
+        elif "bye" in user:
+            print("Bot: Goodbye! Visit again ")
+            break
+        else:
+            print("Bot: Sorry, I didn't understand. Can you rephrase?")
+# Run chatbot
+chatbot()
