@@ -1,0 +1,21 @@
+Instance - Creation
+
+sudo yum update -y
+
+sudo yum install nginx -y
+
+systemctl start nginx
+
+systemctl enable nginx
+
+Python Program
+
+sudo yum install python -y
+
+nano text.py
+
+python test.py
+
+After it Go to Instance > Security
+
+Inbound rules > click on wizard > Edit Inbound > Add HTTP & HTTPS
