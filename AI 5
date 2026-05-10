@@ -1,25 +1,30 @@
-def chatbot():
-    print(" Welcome to Customer Support Chatbot!")
-    print("Type 'exit' to end the chat.\n")
-    while True:
-        user = input("You: ").lower()
-        if user == "exit":
-            print("Bot: Thank you! Have a great day ")
-            break
-        elif "hello" in user or "hi" in user:
-            print("Bot: Hello! How can I assist you today?")
-        elif "order" in user:
-            print("Bot: Please provide your order ID to check status.")
-        elif "price" in user or "cost" in user:
-            print("Bot: Our product prices range from ₹500 to ₹5000.")
-        elif "refund" in user:
-            print("Bot: Refunds are processed within 5-7 business days.")
-        elif "delivery" in user:
-            print("Bot: Delivery usually takes 3-5 days.")
-        elif "bye" in user:
-            print("Bot: Goodbye! Visit again ")
-            break
-        else:
-            print("Bot: Sorry, I didn't understand. Can you rephrase?")
-# Run chatbot
-chatbot()
+# Simple Hospital Chatbot
+
+print("=== Hospital Help Chatbot ===")
+print("Type 'exit' to stop\n")
+
+while True:
+
+    user = input("You: ").lower()
+
+    if user == "hello" or user == "hi":
+        print("Bot: Welcome to City Hospital.")
+
+    elif "doctor" in user:
+        print("Bot: Doctors are available from 10 AM to 5 PM.")
+
+    elif "appointment" in user:
+        print("Bot: Appointment can be booked at reception.")
+
+    elif "emergency" in user:
+        print("Bot: Emergency service is available 24/7.")
+
+    elif "fees" in user:
+        print("Bot: Consultation fee is Rs.500.")
+
+    elif user == "exit":
+        print("Bot: Thank you. Get well soon!")
+        break
+
+    else:
+        print("Bot: Sorry, please try another question.")
