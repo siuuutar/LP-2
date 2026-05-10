@@ -1,4 +1,3 @@
-# Dijkstra's Algorithm
 import heapq
 
 graph = {
