@@ -1,10 +1,7 @@
-# Simple Hospital Chatbot
-
 print("=== Hospital Help Chatbot ===")
 print("Type 'exit' to stop\n")
 
 while True:
-
     user = input("You: ").lower()
 
     if user == "hello" or user == "hi":
